@@ -1,5 +1,6 @@
 from textnode import *
 from htmlnode import *
+import re
 
 def text_node_to_html_node(text_node: TextNode):
     match text_node.text_type:
@@ -45,3 +46,72 @@ def split_nodes_delimiter(old_nodes, delimiter, text_type):
             else:
                 new_nodes.append(node)      
     return new_nodes
+
+def extract_markdown_images(text):
+    return re.findall(r"!\[([^\[\]]*)]\(([^\(\)]*)\)", text)
+    
+def extract_markdown_links(text):
+    return re.findall(r"(?<!!)\[([^\[\]]*)\]\(([^\(\)]*)\)", text)
+
+def split_nodes_image(old_nodes):
+    new_nodes = []
+    for node in old_nodes:
+        if node.text_type != TextType.TEXT:
+            new_nodes.append(node)
+        else:
+            matches = extract_markdown_images(node.text)
+            if matches == []:
+                new_nodes.append(node)
+            else:
+                image_alt, image_link = matches[0]
+                sections = node.text.split(f"![{image_alt}]({image_link})", 1)
+                new_nodes.append(TextNode(sections[0], TextType.TEXT))
+                new_nodes.append(TextNode(image_alt, TextType.IMAGE, image_link))
+                if not sections[1] == "":
+                    new_nodes.extend(split_nodes_image([TextNode(sections[1], TextType.TEXT)]))
+    return new_nodes
+
+def split_nodes_link(old_nodes):
+    new_nodes = []
+    for node in old_nodes:
+        if node.text_type != TextType.TEXT:
+            new_nodes.append(node)
+        else:
+            matches = extract_markdown_links(node.text)
+            if matches == []:
+                new_nodes.append(node)
+            else:
+                link_alt, link = matches[0]
+                sections = node.text.split(f"[{link_alt}]({link})", 1)
+                new_nodes.append(TextNode(sections[0], TextType.TEXT))
+                new_nodes.append(TextNode(link_alt, TextType.LINK, link))
+                if not sections[1] == "":
+                    new_nodes.extend(split_nodes_link([TextNode(sections[1], TextType.TEXT)]))
+    return new_nodes
+
+
+
+def text_to_textnodes(text: str):
+    bold_delimeter = "**"
+    italic_delimeter = "_"
+    code_delimeter = "`"
+    nodes = []
+# text
+    if text == "":
+        return nodes
+    nodes = [TextNode(text, TextType.TEXT)]
+# bold
+    nodes = split_nodes_delimiter(nodes, bold_delimeter, TextType.BOLD)
+# italic
+    nodes = split_nodes_delimiter(nodes, italic_delimeter, TextType.ITALIC)
+# code
+    nodes = split_nodes_delimiter(nodes, code_delimeter, TextType.CODE)
+# image
+    nodes = split_nodes_image(nodes)
+# link
+    nodes = split_nodes_link(nodes)   
+    
+    return nodes
+
+def markdown_to_blocks(md):
+    pass

@@ -114,4 +114,5 @@ def text_to_textnodes(text: str):
     return nodes
 
 def markdown_to_blocks(md):
-    pass
+    blocks = []
+    return blocks

@@ -1,6 +1,7 @@
 from textnode import *
 from htmlnode import *
 from funcs import *
+from blocks import *
 
 def main():
 #    node = TextNode("This is text with a `code block` word", TextType.TEXT)

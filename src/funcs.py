@@ -113,6 +113,6 @@ def text_to_textnodes(text: str):
     
     return nodes
 
-def markdown_to_blocks(md):
-    blocks = []
+def markdown_to_blocks(md: str):
+    blocks = [x.strip() for x in md.split("\n\n") if x]
     return blocks

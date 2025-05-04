@@ -44,12 +44,37 @@ def main():
 #    new_nodes = split_nodes_image([node])
     #print(new_nodes)
 
-    text = "This is **text** with an _italic_ word and a `code block` and an ![obi wan image](https://i.imgur.com/fJRm4Vk.jpeg) and a [link](https://boot.dev)"
-    nodes = text_to_textnodes(text)
-    print(nodes)
-    for node in nodes:
-        print(node)
+#    text = "This is **text** with an _italic_ word and a `code block` and an ![obi wan image](https://i.imgur.com/fJRm4Vk.jpeg) and a [link](https://boot.dev)"
+#    nodes = text_to_textnodes(text)
+#    print(nodes)
+#    for node in nodes:
+#        print(node)
+#
+    md = """
+This is a paragraph
 
+# just a h1 heading
+
+```
+code block
+```
+
+> this is a quote
+
+- unordered
+- list
+- blah blah blah
+
+1. ordered
+2. list
+
+end
+"""
+    blocks = markdown_to_blocks(md)
+    for block in blocks:
+        print(block)
+        print(block_to_block_type(block))
+        print("")
 
 
 main()

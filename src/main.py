@@ -2,6 +2,7 @@ from textnode import *
 from htmlnode import *
 from funcs import *
 from blocks import *
+from md_to_html import *
 
 def main():
 #    node = TextNode("This is text with a `code block` word", TextType.TEXT)
@@ -55,6 +56,8 @@ This is a paragraph
 
 # just a h1 heading
 
+## h2 heading
+
 ```
 code block
 ```
@@ -70,11 +73,20 @@ code block
 
 end
 """
-    blocks = markdown_to_blocks(md)
-    for block in blocks:
-        print(block)
-        print(block_to_block_type(block))
-        print("")
+#    md = """
+#This is **bolded** paragraph
+#text in a p
+#tag here
+#
+#This is another paragraph with _italic_ text and `code` here
+#
+#"""
+    tmp = markdown_to_html_node(md)
+    print(tmp)
+    #print(tmp.to_html())
+    
+    
+    #print("<div><p>This is <b>bolded</b> paragraph text in a p tag here</p><p>This is another paragraph with <i>italic</i> text and <code>code</code> here</p></div>")
 
 
 main()

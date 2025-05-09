@@ -6,10 +6,12 @@ from funcs import *
 from blocks import *
 from md_to_html import *#
 from generate import *
+from pathlib import Path
 
 def clean_public(dir="./public"):
     logging(f"Removing {dir}")
-    shutil.rmtree(dir)
+    if os.path.isdir(dir):
+        shutil.rmtree(dir)
     os.mkdir(dir)
 
 def copy_static(input_dir="./static/", output_dir="./public/"):
@@ -41,7 +43,7 @@ def extract_title(md):
         raise Exception("No title found")
     return title
 
-def generate_page(from_path, template_path, dest_path):
+def generate_page(from_path, template_path, dest_path, basepath):
     logging(f"Generating page from {from_path} to {dest_path}, using template {template_path}")
     input_md = ""
     with open(from_path, "r") as file:
@@ -50,16 +52,21 @@ def generate_page(from_path, template_path, dest_path):
     template = ""
     with open(template_path, "r") as file:
         template = file.read()
-
+    
     input_html = markdown_to_html_node(input_md).to_html()
     title = extract_title(input_md)
     
-    output_html = template.replace("{{ Title }}", title).replace("{{ Content }}", input_html)
-    
-    with open(dest_path, "w") as file:
+    output_html = template.replace("{{ Title }}", title).replace("{{ Content }}", input_html).replace('href="/', f'href="{basepath}').replace('src="/', f'src="{basepath}')
+    Path(os.path.dirname(dest_path)).mkdir(parents=True, exist_ok=True)
+    with Path(dest_path).open("w") as file:
         file.write(output_html)
     
-    
-    
+def generate_pages_recursive(dir_path_content, template_path, dest_dir_path, basepath):
+    for item in os.listdir(dir_path_content):
+        path = os.path.join(dir_path_content, item)
+        if os.path.isdir(path):
+            generate_pages_recursive(path, template_path, os.path.join(dest_dir_path, item), basepath)
+        else:
+            generate_page(path, template_path, os.path.join(dest_dir_path, item.replace(".md", ".html")), basepath)
     
     

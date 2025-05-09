@@ -1,5 +1,7 @@
 # Generated files
 public/
+docs/
+logs/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

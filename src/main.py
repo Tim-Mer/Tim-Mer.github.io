@@ -9,12 +9,10 @@ import os
 
 def main():
     basepath = "/"
-    public_path = "docs"
     if len(sys.argv) >= 2:
         basepath = sys.argv[1]
-        public_path = sys.argv[2]
     content_path = os.path.join("content")
-    public_path = os.path.join(public_path)
+    public_path = os.path.join("docs")
     static_path = os.path.join("static")
 
     clean_public(public_path)

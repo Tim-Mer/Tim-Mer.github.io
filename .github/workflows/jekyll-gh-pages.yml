@@ -34,13 +34,13 @@ jobs:
           python-version: 3.12.7
       - name: execute python script
         run: |
-          python src/main.py / "__site"
+          python src/main.py /
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./
+          source: ./docs
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

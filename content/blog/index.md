@@ -1,4 +1,4 @@
-# Tolkien Fan Club
+# timmer.ie
 
 ![Bird](/images/bird.jpg)
 

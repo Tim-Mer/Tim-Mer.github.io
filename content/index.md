@@ -1,6 +1,6 @@
 # timmer.ie
 
-![Bird](/images/bird.jpg)
+![Bird](/images/small_bird.jpg)
 
 ## Links
 

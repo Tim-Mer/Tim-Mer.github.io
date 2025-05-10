@@ -1,14 +1,45 @@
-# timmer.ie
+# Tolkien Fan Club
 
-![Bird](/images/bird.jpg)
+![JRR Tolkien sitting](/images/tolkien.png)
 
-## Links
+Here's the deal, **I like Tolkien**.
 
-- [Link to Downloads](https://mc.app.timmer.ie:8999)
-- [Link to cockpit](https://mc.app.timmer.ie:9090)
-- [Link to github](https://github.com/Tim-Mer)
+> "I am in fact a Hobbit in all but size."
+>
+> -- J.R.R. Tolkien
 
-- [Link to original generated site](/blog)
+## Blog posts
+
+- [Why Glorfindel is More Impressive than Legolas](/blog/glorfindel)
+- [Why Tom Bombadil Was a Mistake](/blog/tom)
+- [The Unparalleled Majesty of "The Lord of the Rings"](/blog/majesty)
+
+## Reasons I like Tolkien
+
+- You can spend years studying the legendarium and still not understand its depths
+- It can be enjoyed by children and adults alike
+- Disney _didn't ruin it_ (okay, but Amazon might have)
+- It created an entirely new genre of fantasy
+
+## My favorite characters (in order)
+
+1. Gandalf
+2. Bilbo
+3. Sam
+4. Glorfindel
+5. Galadriel
+6. Elrond
+7. Thorin
+8. Sauron
+9. Aragorn
+
+Here's what `elflang` looks like (the perfect coding language):
+
+```
+func main(){
+    fmt.Println("Aiya, Ambar!")
+}
+```
 
 Want to get in touch? [Contact me here](/contact).
 

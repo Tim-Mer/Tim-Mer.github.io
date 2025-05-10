@@ -55,14 +55,6 @@ a:hover {
   border-color: #f4a261;
 }
 
-p:first-letter{
-  display:block;
-  float:left;
-  margin:3px;
-  color:#f00000;
-  font-size:300%;
-}
-
 ul,
 ol {
   padding-left: 30px;

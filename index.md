@@ -1,6 +1,11 @@
 ---
 layout: default
 ---
+Links
+
+[Link to site-generator](./site-generator)
+
+
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 

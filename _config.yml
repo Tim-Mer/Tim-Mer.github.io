@@ -17,11 +17,11 @@ minimal_mistakes_skin    : "dirt" # "air", "aqua", "contrast", "dark", "dirt", "
 # Site Settings
 locale                   : "en-IE"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Timothy Merriman"
+title                    : "The Place Between"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "Timothy Merriman" # site tagline that appears below site title in masthead
 name                     : "Timothy Merriman"
-description              : "A website where I showcase all of the things I've done"
+description              : "Links and posts to all I've done online"
 url                      : "https://timmer.ie/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Tim-Mer/Tim-Mer.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"

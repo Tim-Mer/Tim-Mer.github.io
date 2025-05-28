@@ -2,7 +2,6 @@
 layout: home
 author_profile: true
 ---
-# Home Page
 
 I plan to have this website link to everything I have done online
 

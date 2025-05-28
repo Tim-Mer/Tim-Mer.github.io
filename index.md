@@ -13,7 +13,7 @@ Work
 
 Education
 
-- [Construction of a high performance Beowulf Cluster to simulate quantum confinment written in Julia](julia_beowulf)
+- [Construction of a high performance Beowulf Cluster to simulate quantum confinment written in Julia](Julia_Beowulf)
 
 Projects
 

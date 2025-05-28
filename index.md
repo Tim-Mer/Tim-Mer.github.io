@@ -2,5 +2,27 @@
 layout: home
 author_profile: true
 ---
+# Home Page
 
-[Link to site-generator](site-generator)
+I plan to have this website link to everything I have done online
+
+## Links
+
+Work
+
+- Resume?
+
+Education
+
+- [Construction of a high performance Beowulf Cluster to simulate quantum confinment written in Julia](julia_beowulf)
+
+Projects
+
+- Boot.dev
+    - [site generator project output site](site-generator)
+
+- Random steam game thing
+
+Gaming/Social
+
+- YouTube link?

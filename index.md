@@ -7,7 +7,7 @@ I plan to have this website link to everything I have done online
 
 ## Links
 
-### Work
+### Work Experience
 
 - Resume?
 

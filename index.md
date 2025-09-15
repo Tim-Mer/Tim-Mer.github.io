@@ -23,6 +23,8 @@ I plan to have this website link to everything I have done online
 
 - Random steam game thing
 
+    - [Random Steam Game picker](urban-couscous)
+
 ### Gaming/Social
 
 - YouTube link?

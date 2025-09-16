@@ -23,7 +23,7 @@ I plan to have this website link to everything I have done online
 
 - Random steam game thing
 
-    - [Random Steam Game picker](urban-couscous)
+    - [Random Steam Game picker](urban-couscous/index.html)
 
 ### Gaming/Social
 

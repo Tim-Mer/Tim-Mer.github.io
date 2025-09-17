@@ -20,10 +20,18 @@ I plan to have this website link to everything I have done online
 - Boot.dev
 
     - [site generator project output site](site-generator)
+    - [bookbot](bookbot)
+    - [space_shoot](space_shoot)
+    - [ai_code_thing](ai_code_thing)
+    - [path_finder](path_finder)
 
-- Random steam game thing
+- Big projects
+    - [wi-zen](wi-zen)
+
+- Random short projects
 
     - [Random Steam Game picker](urban-couscous)
+    - [Click_AHK](click_ahk)
 
 ### Gaming/Social
 

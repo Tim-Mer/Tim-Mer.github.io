@@ -12,3 +12,5 @@ main:
   #   url: /sitemap/
   - title: "GitHub"
     url: https://www.github.com/Tim-Mer/
+  - title: "About"
+    url: /about/

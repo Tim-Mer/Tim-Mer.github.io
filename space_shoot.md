@@ -14,3 +14,5 @@ source setup.sh
 python3 main.py
 
 boot.dev asteroids project
+
+[Boot.dev](https://www.boot.dev)
